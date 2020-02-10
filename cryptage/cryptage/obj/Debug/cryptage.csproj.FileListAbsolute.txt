@@ -1,0 +1,9 @@
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\bin\Debug\cryptage.exe.config
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\bin\Debug\cryptage.exe
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\bin\Debug\cryptage.pdb
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.csprojResolveAssemblyReference.cache
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.Form1.resources
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.Properties.Resources.resources
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.csproj.GenerateResource.Cache
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.exe
+C:\Users\NANA BORIS\Documents\C#\Cryptographie\cryptage\cryptage\obj\Debug\cryptage.pdb
