@@ -10,16 +10,17 @@ using System.Windows.Forms;
 using System.IO;
 namespace cryptage
 {
-    public partial class Form1 : Form
+    public partial class btnOuvrirFichier : Form
     {
-        public Form1()
+        Encrypt E = new Encrypt();
+        public btnOuvrirFichier()
         {
             InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            txtCrypter.Clear();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -47,6 +48,41 @@ namespace cryptage
                 StreamWriter sw = new StreamWriter(saveFileDialog1.FileName);
                 sw.Write(txtCrypter.Text);
                 sw.Close();
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtCrypter.Text = E.encryptCesar(txtSimple.Text, txtCle.Text);
+            
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            txtSimple.Text = E.decrypterCesar(txtCrypter.Text, txtCle.Text);
+        }
+
+        private void btnCrypter_Click(object sender, EventArgs e)
+        {
+            txtSimple.Clear();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            openFileDialog1.CheckFileExists = true;
+
+
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtCrypter.Text = "";
+                StreamReader sr = new StreamReader(openFileDialog1.FileName);
+                txtCrypter.Text = sr.ReadToEnd();
+                sr.Close();
             }
         }
     }
