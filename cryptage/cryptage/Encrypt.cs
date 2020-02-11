@@ -19,6 +19,7 @@ namespace cryptage
         }
 
         public string convertirEnLettre(int a) {
+            // conversion en lettre
             string b = "";
             switch (a)
             {
@@ -84,6 +85,7 @@ namespace cryptage
 
         public int convertirEnChiffre(string a)
         {
+            // conversion en chiffre
             int b = 0;
             switch (a.ToUpper())
             {
@@ -148,6 +150,7 @@ namespace cryptage
         }
 
         public int changerChiffre(int a, int cle) {
+            // changement de la valeur de cette lettre
             int b = 0;
             b = a + cle;
             if (b>26)
@@ -158,6 +161,7 @@ namespace cryptage
         }
 
         public int remettreChiffre(int a, int cle) {
+            // recherche de la vrai valeur de cette lettre
             int b = 0;
             b = a - cle;
             if (b<=0)
@@ -168,6 +172,7 @@ namespace cryptage
             return b;
         }
         public string encryptCesar(string texteSimple,string cle) {
+            // place au cryptage
             int cle_chiffre = convertirEnChiffre(cle);
             int a = 0;
             string b = "",c="";
@@ -176,6 +181,7 @@ namespace cryptage
             foreach (char lettre in texteSimple.ToCharArray())
             {
                                 c = lettre.ToString().ToUpper();
+                // on verifie si ce caractere n'est pas une lettre normale de l'alphabet
                 if ((c == "A") || (c == "B") || (c == "C") || (c == "D") || (c == "E") || (c == "F") || (c == "G") || (c == "H") || (c == "I") || (c == "J") || (c == "K") || (c == "L") || (c == "M") || (c == "N") || (c == "O") || (c == "P") || (c == "Q") || (c == "R") || (c == "S") || (c == "T") || (c == "U") || (c == "V") || (c == "W") || (c == "X") || (c == "Y") || (c == "Z"))
                 {
                     a = convertirEnChiffre(lettre.ToString());
@@ -193,6 +199,7 @@ namespace cryptage
         }
 
         public string decrypterCesar(string texteCrypter, string cle) {
+            // Place au decryptage
             int cle_chiffre = convertirEnChiffre(cle);
             int a = 0;
             string b = "",c="";
@@ -201,6 +208,7 @@ namespace cryptage
             foreach (char lettre in texteCrypter.ToCharArray())
             {
                 c = lettre.ToString().ToUpper();
+                // on verifie si ce caractere n'est pas une lettre normale de l'alphabet
                 if ((c == "A") || (c == "B") || (c == "C") || (c == "D") || (c == "E") || (c == "F") || (c == "G") || (c == "H") || (c == "I") || (c == "J") || (c == "K") || (c == "L") || (c == "M") || (c == "N") || (c == "O") || (c == "P") || (c == "Q") || (c == "R") || (c == "S") || (c == "T") || (c == "U") || (c == "V") || (c == "W") || (c == "X") || (c == "Y") || (c == "Z"))
                 {
                     a = convertirEnChiffre(lettre.ToString());

@@ -12,7 +12,7 @@ namespace cryptage
 {
     public partial class btnOuvrirFichier : Form
     {
-        Encrypt E = new Encrypt();
+        Encrypt E = new Encrypt(); // variable de type Encrypt
         public btnOuvrirFichier()
         {
             InitializeComponent();
@@ -20,12 +20,13 @@ namespace cryptage
 
         private void button2_Click(object sender, EventArgs e)
         {
-            txtCrypter.Clear();
+            txtCrypter.Clear(); //vidage du textbox
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
            
+            // ouverture d'un nouveau fichier
                 openFileDialog1.CheckFileExists = true;
           
             
@@ -42,6 +43,7 @@ namespace cryptage
 
         private void btnEnregistrer_Click(object sender, EventArgs e)
         {
+            // enregistrement du fichier
             saveFileDialog1.Filter = "Fichier texte *.txt|*.txt|Fichier batch *.bat|*.bat";
             if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
@@ -58,22 +60,26 @@ namespace cryptage
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // cryptage avec cesar
             txtCrypter.Text = E.encryptCesar(txtSimple.Text, txtCle.Text);
             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // decryptage cesar
             txtSimple.Text = E.decrypterCesar(txtCrypter.Text, txtCle.Text);
         }
 
         private void btnCrypter_Click(object sender, EventArgs e)
         {
+            // vidage du textbox
             txtSimple.Clear();
         }
 
         private void button2_Click_1(object sender, EventArgs e)
         {
+            //ouverture d'un fichier
             openFileDialog1.CheckFileExists = true;
 
 
