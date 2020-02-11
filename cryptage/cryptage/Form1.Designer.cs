@@ -44,6 +44,8 @@
             this.txtCle = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,6 +96,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtCle);
             this.panel1.Controls.Add(this.button1);
@@ -183,6 +187,26 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(12, 300);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(169, 36);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Miror";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(12, 342);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(169, 38);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "decrypter Miror";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            // 
             // btnOuvrirFichier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,6 +250,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCle;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button4;
     }
 }
 

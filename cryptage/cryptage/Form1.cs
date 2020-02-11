@@ -91,5 +91,15 @@ namespace cryptage
                 sr.Close();
             }
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            txtCrypter.Text = E.encryptMiror(txtSimple.Text);
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            txtSimple.Text = E.decryptMiror(txtCrypter.Text);
+        }
     }
 }

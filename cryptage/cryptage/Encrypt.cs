@@ -225,6 +225,100 @@ namespace cryptage
 
             return simple;
         }
-        
+
+        public string Miror(string a) {
+            string b = "";
+
+            switch (a.ToUpper())
+            {
+                case "A": b = "Z";
+                    break;
+                case "B": b = "Y";
+                    break;
+                case "C": b = "X";
+                    break;
+                case "D": b = "W";
+                    break;
+                case "E": b = "V";
+                    break;
+                case "F": b = "U";
+                    break;
+                case "G": b ="T";
+                    break;
+                case "H": b = "S";
+                    break;
+                case "I": b = "R";
+                    break;
+                case "J": b = "Q";
+                    break;
+                case "K": b = "P";
+                    break;
+                case "L": b = "O";
+                    break;
+                case "M": b = "N";
+                    break;
+                case "N": b = "M";
+                    break;
+                case "O": b = "L";
+                    break;
+                case "P": b = "K";
+                    break;
+                case "Q": b = "J";
+                    break;
+                case "R": b = "I";
+                    break;
+                case "S": b = "H";
+                    break;
+                case "T": b = "G";
+                    break;
+                case "U": b = "F";
+                    break;
+                case "V": b = "E";
+                    break;
+                case "W": b = "D";
+                    break;
+                case "X": b = "C";
+                    break;
+                case "Y": b = "B";
+                    break;
+                case "Z": b = "A";
+                    break;
+                default: b = "";
+
+                    break;
+            }
+            return b;
+
+        }
+
+       
+        public string encryptMiror(string texteSimple)
+        {
+            string TexteCrypter = "";
+            string b = "",c="";
+            foreach (char lettre in texteSimple.ToCharArray())
+            {
+                c = lettre.ToString().ToUpper();
+                // on verifie si ce caractere n'est pas une lettre normale de l'alphabet
+                if ((c == "A") || (c == "B") || (c == "C") || (c == "D") || (c == "E") || (c == "F") || (c == "G") || (c == "H") || (c == "I") || (c == "J") || (c == "K") || (c == "L") || (c == "M") || (c == "N") || (c == "O") || (c == "P") || (c == "Q") || (c == "R") || (c == "S") || (c == "T") || (c == "U") || (c == "V") || (c == "W") || (c == "X") || (c == "Y") || (c == "Z"))
+                {
+                    b = Miror(lettre.ToString());
+                }
+                else
+                {
+                    b = lettre.ToString();
+                }
+                    TexteCrypter += b;
+            }
+
+            return TexteCrypter;
+        }
+
+        public string decryptMiror(string TexteCrypter)
+        {
+            string texteSimple = "";
+            texteSimple = encryptMiror(TexteCrypter);
+            return texteSimple;
+        }
     }
 }
